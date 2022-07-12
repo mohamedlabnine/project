@@ -1,0 +1,82 @@
+body{
+	width: 100%;
+	height: 100%;
+}
+header{
+	margin-left: 2%;
+	margin-right: 2% ;
+}
+header .img{
+	width: 10%;
+	height: 10%;
+}
+header .para{
+	position: absolute;
+	left: 12%;
+	top: 2%;
+	font-size: 30px;
+	font-family: initial;
+}
+header .para1{
+	position: absolute;
+	left: 14%;
+	top: 8%;
+	font-size: 30px;
+	font-family:initial ;
+}
+header .Arabe_francais{
+	position: absolute;
+	right: 5%;
+	top: 4%;
+	font-size: 20px;
+}
+.nav{
+	background: grey;
+	border-radius: 4px;
+	height: 80px;
+}
+.nav ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+}
+ul li{
+	float: left;
+	margin-top:20px;
+}
+ul li a{
+	width: 150px;
+	color: white;
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 10px;
+	text-align: center;
+	border-radius:10px ;
+	font-family: century Gothic;
+	font-weight: bold;
+}
+.a:hover{
+	background: green;
+	color: white;
+	text-decoration: none;
+}
+.navbar-left{
+	position: relative;
+	right: -200px;
+}
+ul li ul{
+	background: grey;
+	display: none;
+}
+ul li ul li{
+	float: none;
+	z-index: 1;
+}
+ul li:hover ul{
+	display: block;
+	z-index: 1;
+}
+
+

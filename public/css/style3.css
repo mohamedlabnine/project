@@ -1,0 +1,22 @@
+body{
+	background-color: grey;
+}
+form{
+	border: 2px solid black;
+	padding: 30px;
+	width: 30%;
+	margin: 30px;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	background-color: white;
+}
+form input , form label{
+	display: block;
+	border-radius: 2px;	
+	margin: 20px;
+	width: 50%;
+}
+form input[name='sub']{
+	background-color: blue;
+}

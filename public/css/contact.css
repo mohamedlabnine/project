@@ -1,0 +1,25 @@
+.Arabe_francais{
+	position: absolute;
+	right: 5%;
+	top: 2%;
+}
+body{
+	width: 100%;
+	height: 100%;
+}
+section{
+	width: 70%;
+	position: absolute;
+	left: 5%;
+	top: 2%;
+}
+.row{
+	width: 100%;
+}
+iframe{
+	position: absolute;
+	right: 5%;
+	top: 10%;
+	width: 30%;
+	height: 60%;
+}
