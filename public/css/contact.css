@@ -1,3 +1,8 @@
+form input[name='sub']{
+	background-color: blue;
+	color: white;
+	width: 25%;
+}
 .Arabe_francais{
 	position: absolute;
 	right: 5%;

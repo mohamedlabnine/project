@@ -4,6 +4,11 @@
 		form{
 			margin-top: 40px ;
 		}
+		form input[name='sub']{
+			background-color: blue;
+			color: white;
+			width: 25%;
+        }
 	</style>
 @endsection
 @section('titel')
@@ -56,10 +61,7 @@
 		    <label class="custom-file-label" for="inputGroupFile01">Choisir le fichier</label>
 		  </div>
 		</div><br><br>
-		<button class="btn btn-primary" type="submit">envoyer</button><br><br>
-		<div class="text-center text-md-left">
-	    <a class="btn btn-primary" href="{{ url('/') }}" >revenir</a>
-        </div>
+		<input type="submit" class="form-control " value="Envoye" name="sub" >
     </form>
     
 @endsection 

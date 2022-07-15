@@ -67,17 +67,13 @@
 	                        </div>
 
 	                    </div>
-	                </div>
+	                </div><br><br><br>
 	                <!--Grid row-->
+	                <input type="submit" class="form-control " value="Envoye" name="sub" >
 
 	            </form><br><br>
 
-	            <div class="text-center text-md-left">
-	                <a class="btn btn-primary" >Envoyer</a>
-	            </div><br>
-	            <div class="text-center text-md-left">
-	                <a class="btn btn-primary" href="{{url('/') }}" >revenir</a>
-	            </div>
+	            
 	        </div>
 	    </div>
 

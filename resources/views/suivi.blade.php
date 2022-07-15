@@ -9,12 +9,18 @@
 @endsection
 	
 @section('content')
-	<form action="{{ url('suivi_demande') }}" method="POST">
-		@csrf 
-		<label>N° de demande</label>
-		<input type="text" name="id" required>
-		<label>code de dossie</label>
-		<input type="text" name="code" required>
-		<input type="submit" name="sub" value="conexion">
-	</form>
+	<div class="form">
+		<img  src="https://www.logopik.com/wp-content/uploads/edd/2018/09/Royaume-du-maroc-Kingdom-of-morocco-Vector-Logo.png">
+		<form action="{{ url('suivi_demande') }}" method="POST">
+			@csrf
+			<label >Nemero de demande *</label>
+			<input type="text" class="form-control " placeholder="Nemero" name="id" required>
+			<label >code *</label>
+			<input type="text" class="form-control " placeholder="code" name="code" required>
+			<input type="submit" class="form-control " value="conexion" name="sub" >
+	    </form>
+	</div>
+	<div id="img" >
+		<img  src="image.jpg">
+	</div>
 @endsection 
