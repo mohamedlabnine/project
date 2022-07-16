@@ -13,11 +13,11 @@
 			<th class="border" >action</th>
 		</tr>
 		@foreach ($demandes as $demande)
-	    	@if ( $demande->etat_demande == "pas encore")
+	    	@if ( $demande->etat_demande == "refuse")
 		    	<tr>
 					<td class="border" >{{ $demande->nom }}</td>
 					<td class="border" >{{ $demande->prenom }}</td>
-					<td class="border" >{{ $demande->cin }}</td>
+					<td class="border" >{{ $demande->etat_demande }}</td>
 					<td class="border" >
 						
 						<form method="POST" action="{{ url('view') }}">

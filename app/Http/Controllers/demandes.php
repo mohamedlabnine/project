@@ -40,10 +40,18 @@ class Demandes extends Controller
         return view('pdf' , ['demande' => $demande ]);
 
     }
-    public function display()
+    public function espase_Admin(){
+        return view('espase_Admin') ;
+    }
+    public function admin_test(Request $req)
     {
-        $demandes = demande::all() ;
-        return view('Admin', ['demandes' => $demandes ] );
+        if ($req->nom == 'labnine' && $req->code == "1999") {
+            $demandes = demande::all() ;
+            return view('Admin', [ 'demandes' => $demandes ] );
+        }
+        else{
+            return view("espase_Admin") ;
+        }
     }
     public function view(Request $req){
         $demande = demande::find($req->id) ;
@@ -87,6 +95,22 @@ class Demandes extends Controller
         else{
             return view('suivi');
         }
+    }
+    public function admin(){
+        $demandes = demande::all() ;
+        return view('Admin', [ 'demandes' => $demandes ] );
+    }
+    public function admina(){
+        $demandes = demande::all() ;
+        return view('Admina', [ 'demandes' => $demandes ] );
+    }
+    public function adminr(){
+        $demandes = demande::all() ;
+        return view('Adminr', [ 'demandes' => $demandes ] );
+    }
+    public function admint(){
+        $demandes = demande::all() ;
+        return view('Admint', [ 'demandes' => $demandes ] );
     }
 
 }

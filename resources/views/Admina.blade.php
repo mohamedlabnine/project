@@ -13,7 +13,7 @@
 			<th class="border" >action</th>
 		</tr>
 		@foreach ($demandes as $demande)
-	    	@if ( $demande->etat_demande == "pas encore")
+	    	@if ( $demande->etat_demande == "accepte")
 		    	<tr>
 					<td class="border" >{{ $demande->nom }}</td>
 					<td class="border" >{{ $demande->prenom }}</td>

@@ -1,18 +1,1 @@
-table{
-	margin-top: 25px;
-	border: 3px solid grey;
-}
-table tr  {
-	border: 3px solid grey;
-}
-table tr td  , table tr th{
-	text-align: center;
-	justify-items: center;
-	align-items: center;
-	padding: 6px ;
-	
-}
-.input{
-	background-color: blue ;
-	color: white;
-}
+

@@ -1,17 +1,7 @@
 @extends('base')
 
 @section('link_css')
-	<style type="text/css">
-		.div{
-			align-items: center;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-			border: 1px black solid;
-			border-radius: 2px ;
-			margin-top: 100px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/style5.css">
 @endsection
 @section('titel')
 	laravel 
@@ -19,7 +9,7 @@
 	
 @section('content')
 	<div class=" container div">
-		<p>Bonjour {{ $demande->nom}} {{ $demande->prenom}} </p>
+		<h1>Bonjour {{ $demande->nom}} {{ $demande->prenom}} </h1><br><br><br>
 	    @if ($demande->etat_demande === "accepte")
 		    <h4>heureusement votre demande est accepte tu peut consulte l'adminitration pour obtenir l'authorisation</h4>
 		@elseif ( $demande->etat_demande === "pas encore" )

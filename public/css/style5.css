@@ -1,0 +1,12 @@
+.div{
+	align-items: center;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border: 1px black solid;
+	border-radius: 2px ;
+	margin-top: 100px;
+	width: 50%;
+	height: 500px;
+	padding: 50px;
+}

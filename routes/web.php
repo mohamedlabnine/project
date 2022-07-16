@@ -11,15 +11,21 @@
 |
 */
 
-Route::get('/','Demandes@index')->name("home");
-Route::get('/contact','Demandes@contact')->name("contact");
-Route::get('/suivi','Demandes@suivi')->name("suivi");
+Route::get('/','demandes@index')->name("home");
+Route::get('/contact','demandes@contact')->name("contact");
+Route::get('/suivi','demandes@suivi')->name("suivi");
 Route::POST('/suivi_demande','Demandes@suivi_demande')->name("suivi_demande");
-Route::get('/depose','Demandes@create')->name("depose");
-Route::POST('/save','Demandes@save')->name("save");
-Route::get('/Admin','Demandes@display')->name("display");
-Route::POST('/view','Demandes@view')->name("view") ;
-Route::POST('/accepte','Demandes@accepte')->name("accepte") ;
-Route::POST('/refuse','Demandes@refuse')->name("refuse") ;
+Route::get('/depose','demandes@create')->name("depose");
+Route::POST('/save','demandes@save')->name("save");
+Route::get('/espase_Admin','demandes@espase_Admin')->name("espase_Admin");
+Route::POST('/admin_test','demandes@admin_test')->name("admin_test");
+Route::POST('/view','demandes@view')->name("view") ;
+Route::POST('/accepte','demandes@accepte')->name("accepte") ;
+Route::POST('/refuse','demandes@refuse')->name("refuse") ;
 Route::POST('/suivi_demande','Demandes@suivi_demande')->name("suivi_demande") ;
-Route::get('/pdf','Demandes@pdf')->name("pdf") ;
+Route::get('/pdf','demandes@pdf')->name("pdf") ;
+Route::get('/nav',function (){ return view('layote/nav_admin'); })->name("nav") ;
+Route::get('/Admin','demandes@admin')->name("Admin") ;
+Route::get('/Admina','demandes@admina')->name("Admina") ;
+Route::get('/Adminr','demandes@adminr')->name("Adminr") ;
+Route::get('/Admint','demandes@admint')->name("Admint") ;
