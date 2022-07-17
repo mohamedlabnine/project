@@ -12,16 +12,19 @@ class Demandes extends Controller
     {
         return view('index');
     }
-    public function contact()
+    public function contact($lang)
     {
+        app()->setlocale($lang) ;
         return view('contact');
     }
-    public function suivi()
+    public function suivi($lang)
     {
+        app()->setlocale($lang) ;
         return view('suivi');
     }
-    public function create()
+    public function create($lang)
     {
+        app()->setlocale($lang) ;
         return view('depose') ;
     }
     public function save(Request $req)
@@ -40,16 +43,19 @@ class Demandes extends Controller
         return view('pdf' , ['demande' => $demande ]);
 
     }
-    public function espase_Admin(){
+    public function espase_Admin($lang){
+        app()->setlocale($lang) ;
         return view('espase_Admin') ;
     }
-    public function admin_test(Request $req)
+    public function admin_test(Request $req , $lang)
     {
         if ($req->nom == 'labnine' && $req->code == "1999") {
             $demandes = demande::all() ;
+            app()->setlocale($lang) ;
             return view('Admin', [ 'demandes' => $demandes ] );
         }
         else{
+            app()->setlocale($lang) ;
             return view("espase_Admin") ;
         }
     }
@@ -96,20 +102,24 @@ class Demandes extends Controller
             return view('suivi');
         }
     }
-    public function admin(){
+    public function admin($lang){
         $demandes = demande::all() ;
+        app()->setlocale($lang) ;
         return view('Admin', [ 'demandes' => $demandes ] );
     }
-    public function admina(){
+    public function admina($lang){
         $demandes = demande::all() ;
+        app()->setlocale($lang) ;
         return view('Admina', [ 'demandes' => $demandes ] );
     }
-    public function adminr(){
+    public function adminr($lang){
         $demandes = demande::all() ;
+        app()->setlocale($lang) ;
         return view('Adminr', [ 'demandes' => $demandes ] );
     }
-    public function admint(){
+    public function admint($lang){
         $demandes = demande::all() ;
+        app()->setlocale($lang) ;
         return view('Admint', [ 'demandes' => $demandes ] );
     }
 

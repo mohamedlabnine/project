@@ -4,16 +4,21 @@ body{
 }
 .form{
 	padding: 30px;
-	width: 40%;
+	width: 36%;
 	height: 100%;
 	background-color: white;
 	float: left;
+	margin: 2%;
 }
 .form img{
 	width: 40%;
 	height: 40%;
 	position: relative;
 	left: 25%;
+}
+.form form label{
+	position: relative;
+	width: 100%;
 }
 form input , form label{
 	display: block;

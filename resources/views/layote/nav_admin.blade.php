@@ -10,6 +10,7 @@
 		nav{
 			margin-top: 10px;
 			width: 100%;
+			height: 120px;
 		}
 		nav li {
 			padding: 20px;
@@ -17,6 +18,7 @@
 			border: 2px solid grey;
 		    border-radius: 20px ;
 		    width: 20%;
+		    height: 60%;
 		    text-align: center;
 		} 
 		nav li a{
@@ -27,6 +29,7 @@
 			border-bottom:none ;
 			background-color: grey;
 			color: white;
+			font-size: 20px;
 		}
 		nav li a:hover{
 			color: black;
@@ -42,10 +45,10 @@
 </head>
 <body>
 	<nav  class="container nav " >
-		<li><a  href="{{ url('Admin') }}">Pas encore examenie</a></li>
-		<li  ><a  href="{{ url('Admina') }}">Accepte</a></li>
-		<li ><a  href="{{ url('Adminr') }}">Refuse</a></li>
-		<li  ><a  href="{{ url('Admint') }}">Tous les demande</a></li>
+		<li><a  href="{{ config('app.locale') == 'fr' ? url('admin/fr') :  url('admin/ar') }}">{{ __('admin.pee') }}</a></li>
+		<li  ><a  href="{{ config('app.locale') == 'fr' ? url('admina/fr') :  url('admina/ar') }}">{{ __('admin.accepte') }}</a></li>
+		<li ><a  href="{{ config('app.locale') == 'fr' ? url('adminr/fr') :  url('adminr/ar') }}">{{ __('admin.refuse') }}</a></li>
+		<li  ><a  href="{{ config('app.locale') == 'fr' ? url('admint/fr') :  url('admint/ar') }}">{{ __('admin.tdm') }}</a></li>
 	</nav><br>
 	<a class="a" href="/">Log out</a>
 	@yield('content')

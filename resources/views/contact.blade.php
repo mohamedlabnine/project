@@ -1,7 +1,12 @@
 @extends('base')
 
 @section('link_css')
-	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	@if ( config('app.locale') == 'fr' )
+		<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	@else 
+		<link rel="stylesheet" type="text/css" href="/css/contact1.css">
+	@endif
+
 @endsection
 @section('titel')
 	laravel 
@@ -12,7 +17,7 @@
 	<section class="mb-4">
 
 	    <!--Section heading-->
-	    <h2 class="h1-rsesponsive font-weight-bold text-center my-4"> Contactez-nous </h2>
+	    <h2 class="h1-rsesponsive font-weight-bold text-center my-4"> {{ __('contact.header') }} </h2>
 	    <!--Section description-->
 	    <div class="row">
 
@@ -26,7 +31,7 @@
 	                    <!--Grid column-->
 	                    <div class="col-md-6">
 	                        <div class="md-form mb-0">
-	                        	<label for="name" class="">Nome</label>
+	                        	<label for="name" class="">{{ __('contact.nom') }}</label>
 	                            <input type="text" id="name" name="name" class="form-control">  
 	                        </div>
 	                    </div>
@@ -35,7 +40,7 @@
 	                    <!--Grid column-->
 	                    <div class="col-md-6">
 	                        <div class="md-form mb-0">
-	                        	<label for="email" class="">email</label>
+	                        	<label for="email" class="">{{ __('contact.email') }}</label>
 	                            <input type="text" id="email" name="email" class="form-control">
 	                        </div>
 	                    </div>
@@ -48,7 +53,7 @@
 	                <div class="row">
 	                    <div class="col-md-12">
 	                        <div class="md-form mb-0">
-	                        	<label for="subject" class="">objectif</label>
+	                        	<label for="subject" class="">{{ __('contact.obj') }}</label>
 	                            <input type="text" id="subject" name="subject" class="form-control"> 
 	                        </div>
 	                    </div>
@@ -62,14 +67,14 @@
 	                    <div class="col-md-12">
 
 	                        <div class="md-form">
-	                            <label for="message">message</label>
+	                            <label for="message">{{ __('contact.meg') }}</label>
 	                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
 	                        </div>
 
 	                    </div>
 	                </div><br><br><br>
 	                <!--Grid row-->
-	                <input type="submit" class="form-control " value="Envoye" name="sub" >
+	                <input type="submit" class="form-control " value="{{ __('contact.sub') }}" name="sub" >
 
 	            </form><br><br>
 

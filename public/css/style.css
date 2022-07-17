@@ -3,37 +3,34 @@ body{
 	height: 100%;
 }
 header{
-	margin-left: 2%;
-	margin-right: 2% ;
+	text-align: center;
+	padding-top:4% ;
+	height: 200px;
+	width: 100%;
+	font-family: "Gill Sans", sans-serif;
+	color: darkblue;
 }
-header .img{
-	width: 10%;
-	height: 10%;
-}
-header .para{
+header .img1{
+	width: 25%;
+	height: 20%;
 	position: absolute;
-	left: 12%;
+	top: 1%;
+	left: 0%;
+}
+header .img2{
+	position: absolute;
 	top: 2%;
-	font-size: 30px;
-	font-family: initial;
-}
-header .para1{
-	position: absolute;
-	left: 14%;
-	top: 8%;
-	font-size: 30px;
-	font-family:initial ;
-}
-header .Arabe_francais{
-	position: absolute;
-	right: 5%;
-	top: 4%;
-	font-size: 20px;
+	right: 2%;
+	width: 25%;
+	height: 15%;
 }
 .nav{
 	background: grey;
 	border-radius: 4px;
 	height: 80px;
+	position: sticky;
+	top: 0px;
+	z-index: 1;
 }
 .nav ul{
 	list-style: none;
@@ -50,7 +47,7 @@ ul li a{
 	color: white;
 	display: block;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 18px;
 	padding: 10px;
 	text-align: center;
 	border-radius:10px ;
@@ -61,6 +58,9 @@ ul li a{
 	background: green;
 	color: white;
 	text-decoration: none;
+	font-size: 21px;
+	border-top-left-radius: 20px ;
+    border-bottom-left-radius : 20px;
 }
 .navbar-left{
 	position: relative;
@@ -77,6 +77,30 @@ ul li ul li{
 ul li:hover ul{
 	display: block;
 	z-index: 1;
+}
+.video {
+	position: relative;
+	background-color: black;
+	height: 60vh;
+	min-height: 25rem;
+	width: 100%;
+	overflow: hidden;
+	margin-top: 20px;
+}
+
+.video video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 0;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
 }
 
 

@@ -7,10 +7,10 @@
 @section('content')
 	<table class="container table table-striped">
 		<tr class="border">
-			<th class="border" >Nom</th>
-			<th class="border" >Prenom</th>
-			<th class="border" >cin</th>
-			<th class="border" >etat</th>
+			<th class="border" >{{ __('admin.nom') }}</th>
+			<th class="border" >{{ __('admin.prenom') }}</th>
+			<th class="border" >{{ __('admin.cin') }}</th>
+			<th class="border" >{{ __('admin.etat') }}</th>
 		</tr>
 		@foreach ($demandes as $demande)
 		    	@if ($demande->etat_demande == "accepte")
@@ -37,4 +37,5 @@
 			    @endif
 		@endforeach
 	</table>
+	
 @endsection 

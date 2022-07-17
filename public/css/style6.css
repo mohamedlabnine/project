@@ -2,7 +2,10 @@ body{
 	width: 100%;
 	width: 100%;
 	background-image: url("image.jpg");
-	text-align: center;
+}
+img{
+	position: absolute;
+	left: 42%;
 }
 form{
 	width: 30%;
