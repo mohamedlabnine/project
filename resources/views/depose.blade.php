@@ -50,11 +50,11 @@
 
 @endsection
 @section('titel')
-	laravel 
+	dèposer 
 @endsection
 @section('content')
 	<header>
-		<img class="img" src="../logo1.jpg">
+		<img class="img" src="../logo1.png">
 	     <p>{{ __('index.header.service') }} </p>
 	     <p>{{ __('index.header.region') }}</p>
 	</header>

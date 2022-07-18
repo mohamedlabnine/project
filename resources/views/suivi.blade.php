@@ -19,14 +19,14 @@
 @endsection
 
 @section('titel')
-	laravel 
+	suivir
 @endsection
 	
 @section('content')
 
 	<div class="form">
 		<header>
-    	<img class="img" src="../logo1.jpg"><br><br>
+    	<img class="img" src="../logo1.png"><br><br>
 		<p>{{ __('index.header.service') }} </p>
 		<p>{{ __('index.header.region') }}</p>
         </header>

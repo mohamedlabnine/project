@@ -4,15 +4,15 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 @endsection
 @section('titel')
-	laravel 
+	Accuiel 
 @endsection
 
 @section('content')
 	<header >
 		<h3 class="para">{{ __('index.header.service') }}</h3>
 		<h3 class="para1">{{ __('index.header.region') }}</h3>
-		<img class="img1" src="Logo2.png"><br>
-		<img class="img2" src="logo1.jpg">
+		<img class="img1" src="logo2.png"><br>
+		<img class="img2" src="logo1.png">
 		<p ><a style="padding: 10px" href="{{ url('fr') }}">francais </a><a style="padding: 10px" href="{{ url('ar') }}"> Arabe</a></p>
 	</header>
     <div class="nav container">

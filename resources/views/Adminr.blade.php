@@ -1,9 +1,5 @@
 @extends('layote.nav_admin')
 
-@section('titel')
-	laravel 
-@endsection
-
 @section('content')
 	<table class="container table table-striped">
 		<tr class="border">

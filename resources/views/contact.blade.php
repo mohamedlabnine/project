@@ -9,7 +9,7 @@
 
 @endsection
 @section('titel')
-	laravel 
+	contact 
 @endsection
 
 @section('content')
