@@ -54,6 +54,9 @@ ul li a{
 	font-family: century Gothic;
 	font-weight: bold;
 }
+ul li  ul li .a:hover{
+	font-size: 18px;
+}
 .a:hover{
 	background: green;
 	color: white;

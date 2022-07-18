@@ -32,7 +32,7 @@
 	                    <div class="col-md-6">
 	                        <div class="md-form mb-0">
 	                        	<label for="name" class="">{{ __('contact.nom') }}</label>
-	                            <input type="text" id="name" name="name" class="form-control">  
+	                            <input type="text" id="name" name="name" class="form-control" required>  
 	                        </div>
 	                    </div>
 	                    <!--Grid column-->
@@ -41,7 +41,7 @@
 	                    <div class="col-md-6">
 	                        <div class="md-form mb-0">
 	                        	<label for="email" class="">{{ __('contact.email') }}</label>
-	                            <input type="text" id="email" name="email" class="form-control">
+	                            <input type="text" id="email" name="email" class="form-control" required>
 	                        </div>
 	                    </div>
 	                    <!--Grid column-->
@@ -54,7 +54,7 @@
 	                    <div class="col-md-12">
 	                        <div class="md-form mb-0">
 	                        	<label for="subject" class="">{{ __('contact.obj') }}</label>
-	                            <input type="text" id="subject" name="subject" class="form-control"> 
+	                            <input type="text" id="subject" name="subject" class="form-control" required> 
 	                        </div>
 	                    </div>
 	                </div><br>
@@ -68,7 +68,7 @@
 
 	                        <div class="md-form">
 	                            <label for="message">{{ __('contact.meg') }}</label>
-	                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+	                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
 	                        </div>
 
 	                    </div>

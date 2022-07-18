@@ -15,7 +15,7 @@
 Route::get('/','demandes@index')->name("home");
 Route::get('/contact/{lang}','demandes@contact')->name("contact");
 Route::get('/suivi/{lang}','demandes@suivi')->name("suivi");
-Route::POST('/suivi_demande','Demandes@suivi_demande')->name("suivi_demande");
+Route::POST('/suivi_demande/{lang}','Demandes@suivi_demande')->name("suivi_demande");
 Route::get('/depose/{lang}','demandes@create')->name("depose");
 Route::POST('/save','demandes@save')->name("save");
 Route::get('/espase_Admin/{lang}','demandes@espase_Admin')->name("espase_Admin");
@@ -34,3 +34,4 @@ Route::get('/{lang}' , function($lang){
 	app()->setlocale($lang) ;
 	return view("/index");
 })->name("langue");
+Route::get('/{lang}' , 'demandes@deconnexion')->name("deconexion");

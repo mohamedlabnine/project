@@ -51,6 +51,7 @@ class Demandes extends Controller
     {
         if ($req->nom == 'labnine' && $req->code == "1999") {
             $demandes = demande::all() ;
+            $req->session()->put('user', 'labnine');
             app()->setlocale($lang) ;
             return view('Admin', [ 'demandes' => $demandes ] );
         }
@@ -84,12 +85,13 @@ class Demandes extends Controller
         $demandes = demande::all() ;
         return view('Admin', ['demandes' => $demandes ] );
     }
-    public function suivi_demande(Request $req)
+    public function suivi_demande(Request $req , $lang)
     {
         $demande_id = null ;
         $demande_code = null ;
         $demande_id = demande::find($req->id) ;
         $demande_code = demande::find($req->code) ;
+        app()->setlocale($lang) ;
         if ($demande_id != null && $demande_code!= null) {
             if ($demande_id->id == $demande_code->id) {
                 return view('suivi_demande' , ['demande' => $demande_id ]);
@@ -102,25 +104,54 @@ class Demandes extends Controller
             return view('suivi');
         }
     }
-    public function admin($lang){
-        $demandes = demande::all() ;
+    public function admin(Request $req , $lang){
         app()->setlocale($lang) ;
-        return view('Admin', [ 'demandes' => $demandes ] );
+        
+        if ($req->session()->exists('user')) {
+            $demandes = demande::all() ;
+            return view('Admin', [ 'demandes' => $demandes ] );
+        }
+        else{
+            return view('espase_Admin') ;
+        }
+        
     }
-    public function admina($lang){
-        $demandes = demande::all() ;
+    public function admina(Request $req , $lang){
         app()->setlocale($lang) ;
-        return view('Admina', [ 'demandes' => $demandes ] );
+        
+        if ($req->session()->exists('user')) {
+            $demandes = demande::all() ;
+            return view('Admina', [ 'demandes' => $demandes ] );
+        }
+        else{
+            return view('espase_Admin') ;
+        }
     }
-    public function adminr($lang){
-        $demandes = demande::all() ;
+    public function adminr(Request $req , $lang){
         app()->setlocale($lang) ;
-        return view('Adminr', [ 'demandes' => $demandes ] );
+        
+        if ($req->session()->exists('user')) {
+            $demandes = demande::all() ;
+            return view('Adminr', [ 'demandes' => $demandes ] );
+        }
+        else{
+            return view('espase_Admin') ;
+        }
     }
-    public function admint($lang){
-        $demandes = demande::all() ;
+    public function admint(Request $req , $lang){
         app()->setlocale($lang) ;
-        return view('Admint', [ 'demandes' => $demandes ] );
+        if ($req->session()->exists('user')) {
+            $demandes = demande::all() ;
+            return view('Admint', [ 'demandes' => $demandes ] );
+        }
+        else{
+            return view('espase_Admin') ;
+        }
+    }
+    public function deconnexion(Request $req , $lang) {
+        $req->session()->forget('user');
+        app()->setlocale($lang) ;
+        return view("/index");
     }
 
 }

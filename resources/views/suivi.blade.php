@@ -10,6 +10,10 @@
 			input{
 				text-align: right;
 			}
+			form input[name='sub']{
+				text-align: center;
+			}
+			
 		</style>
 	@endif
 @endsection
@@ -19,9 +23,14 @@
 @endsection
 	
 @section('content')
+
 	<div class="form">
-		<img  src="https://www.logopik.com/wp-content/uploads/edd/2018/09/Royaume-du-maroc-Kingdom-of-morocco-Vector-Logo.png">
-		<form action="{{ url('suivi_demande') }}" method="POST">
+		<header>
+    	<img class="img" src="../logo1.jpg"><br><br>
+		<p>{{ __('index.header.service') }} </p>
+		<p>{{ __('index.header.region') }}</p>
+        </header>
+		<form action="{{ config('app.locale') == 'fr' ? url('suivi_demande/fr') : url('suivi_demande/ar') }}" method="POST">
 			@csrf
 			<label >{{ __('service.suivi.Nemero') }}</label>
 			<input type="text" class="form-control " placeholder="{{ __('service.suivi.Nemero') }}" name="id" required>

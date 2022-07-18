@@ -10,11 +10,18 @@ body{
 	float: left;
 	margin: 2%;
 }
-.form img{
-	width: 40%;
-	height: 40%;
+.form header {
+	text-align: center;
+}
+.form .img{
 	position: relative;
-	left: 25%;
+	width: 80%;
+	height: 40%;
+}
+.form p{
+	color: darkblue;
+	font-size: 30px;
+	font-family: "Gill Sans", sans-serif;
 }
 .form form label{
 	position: relative;

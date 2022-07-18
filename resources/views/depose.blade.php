@@ -1,6 +1,21 @@
 @extends('base')
 @section('link_css')
 	<style type="text/css">
+		header{
+			text-align: center;
+			justify-content: center;
+			justify-items: center;
+		}
+		header img{
+			position: relative;
+			width: 30%;
+			height: 20%;
+		}
+		header p{
+			color: darkblue;
+			font-size: 30px;
+			font-family: "Gill Sans", sans-serif;
+		}
 		form{
 			margin-top: 40px ;
 			
@@ -38,6 +53,11 @@
 	laravel 
 @endsection
 @section('content')
+	<header>
+		<img class="img" src="../logo1.jpg">
+	     <p>{{ __('index.header.service') }} </p>
+	     <p>{{ __('index.header.region') }}</p>
+	</header>
 	<form class="container" method="POST" action="{{ url('save') }}" enctype="multipart/form-data">
 		@csrf 
 		<div class="form-row">

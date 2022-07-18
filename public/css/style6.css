@@ -10,7 +10,7 @@ img{
 form{
 	width: 30%;
 	height: 50%;
-	border: 2px solid black ;
+	border: 2px solid #072875 ;
 	border-radius: 10px;
 	position: absolute;
 	top: 35%;
@@ -18,6 +18,7 @@ form{
 	padding: 30px;
 }
 input[name='sub']{
-	background-color: blue;
+	background-color: #072875;
 	color: white;
+	text-align: center;
 }

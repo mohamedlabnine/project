@@ -1,20 +1,22 @@
 form input[name='sub']{
-	background-color: blue;
+	background-color: #072875;
 	color: white;
 	width: 30%;
 	position: absolute;
-	left: 30%;
+	left: 5%;
 }
 body{
 	width: 100%;
 	height: 100%;
+	background-color: #EDF0F8;
 }
 section{
 	width: 70%;
 	position: absolute;
 	left: 5%;
 	top: 2%;
-	text-align: center;
+	color: #072875;
+	background-color: #EDF0F8;
 }
 .row{
 	width: 100%;

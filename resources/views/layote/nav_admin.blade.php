@@ -50,7 +50,7 @@
 		<li ><a  href="{{ config('app.locale') == 'fr' ? url('adminr/fr') :  url('adminr/ar') }}">{{ __('admin.refuse') }}</a></li>
 		<li  ><a  href="{{ config('app.locale') == 'fr' ? url('admint/fr') :  url('admint/ar') }}">{{ __('admin.tdm') }}</a></li>
 	</nav><br>
-	<a class="a" href="/">Log out</a>
+	<a class="a" href="{{ url(config('app.locale')) }}">Log out</a>
 	@yield('content')
 </body>
 </html>
