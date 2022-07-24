@@ -2,6 +2,7 @@
 
 @section('content')
 	<table class="container table table-striped">
+		
 		<tr class="border">
 			<th class="border" >{{ __('admin.nom') }}</th>
 			<th class="border" >{{ __('admin.prenom') }}</th>

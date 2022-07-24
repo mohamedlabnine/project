@@ -28,3 +28,12 @@ iframe{
 	width: 30%;
 	height: 60%;
 }
+@media screen and (max-width: 900px){
+	section{
+		width: 100%;
+	}
+	iframe{
+		top : 75% ;
+		width: 70%;
+	}
+}

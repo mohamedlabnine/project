@@ -13,5 +13,11 @@ return [
 	'cin' => 'cin' ,
 	'action' => 'action' ,
 	'affiche' => 'affiche' ,
-	'etat' => 'etat de demande'
+	'etat' => 'etat de demande' ,
+	'deconexion' => 'dèconnexion' ,
+	'ajoute' => 'ajoute un actualité' ,
+	'clicke' => 'Cliquez' ,
+	'titre' => 'titre' ,
+	'description' => 'description' ,
+	'chose' => 'Choisis une image'
 ] ;

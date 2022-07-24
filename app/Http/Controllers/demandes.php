@@ -8,10 +8,6 @@ use \App\demande  ;
 class Demandes extends Controller
 {
     private $id = 4 ;
-    public function index()
-    {
-        return view('index');
-    }
     public function contact($lang)
     {
         app()->setlocale($lang) ;
@@ -61,8 +57,14 @@ class Demandes extends Controller
         }
     }
     public function view(Request $req){
-        $demande = demande::find($req->id) ;
-        return view('view' , [ 'demande' => $demande]) ;
+        if ($req->session()->exists('user')) {
+            $demandes = demande::all() ;
+            $demande = demande::find($req->id) ;
+            return view('view' , [ 'demande' => $demande]) ;
+        }
+        else{
+            return view('espase_Admin') ;
+        }
     }
     public function accepte(Request $req)
     {
@@ -149,9 +151,15 @@ class Demandes extends Controller
         }
     }
     public function deconnexion(Request $req , $lang) {
-        $req->session()->forget('user');
         app()->setlocale($lang) ;
-        return view("/index");
+        if ($req->session()->exists('user')) {
+            $req->session()->forget('user');
+            $demandes = demande::all() ;
+            return view("/index");
+        }
+        else{
+            return view('espase_Admin') ;
+        }
     }
 
 }

@@ -19,8 +19,8 @@
 @endsection
 
 @section('content')
+	<header><img src="../Admin.jpeg"></header>
 	<div class="form">
-		<img src="../Admin.jpeg">
 		<form action="{{ config('app.locale') == 'fr' ? url('admin_test/fr') :  url('admin_test/ar') }}" method="POST">
 			@csrf
 			<label >{{ __('admin.nom_admin') }}</label><br>

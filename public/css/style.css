@@ -105,5 +105,31 @@ ul li:hover ul{
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
 }
+div div div .para{
+	width: 900px;
+}
+div div div .new{
+	display: inline-block;
+}
+div div .date{
+	width : 200px ; 
+	border: 1px solid grey ;
+}
+
+@media screen and (max-width: 1200px){
+	div div h5{
+		width: 100px;
+	}
+	div div div .new{
+		display: block;
+	}
+	div div .date{
+		font-size: 5px;
+		width: 100px ;
+	}
+	div div div .para{
+		width: 200px;
+	}
+}
 
 

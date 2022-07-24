@@ -46,3 +46,15 @@ form input[name='sub']{
 	width: 60%;
 	height: 100%;
 }
+@media screen and (max-width: 900px) {
+  	#img {
+		display: none;
+		
+    }
+    .form{
+    	width: 90%;
+    }
+    .form p{
+		font-size: 15px;
+	}
+}

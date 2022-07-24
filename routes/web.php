@@ -10,9 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-Route::get('/','demandes@index')->name("home");
 Route::get('/contact/{lang}','demandes@contact')->name("contact");
 Route::get('/suivi/{lang}','demandes@suivi')->name("suivi");
 Route::POST('/suivi_demande/{lang}','Demandes@suivi_demande')->name("suivi_demande");
@@ -29,9 +26,8 @@ Route::get('/admin/{lang}','demandes@admin')->name("Admin") ;
 Route::get('/admina/{lang}','demandes@admina')->name("Admina") ;
 Route::get('/adminr/{lang}','demandes@adminr')->name("Adminr") ;
 Route::get('/admint/{lang}','demandes@admint')->name("Admint") ;
+Route::get('/deconnexion/{lang}' , 'demandes@deconnexion')->name("deconexion");
 
-Route::get('/{lang}' , function($lang){
-	app()->setlocale($lang) ;
-	return view("/index");
-})->name("langue");
-Route::get('/{lang}' , 'demandes@deconnexion')->name("deconexion");
+Route::POST('/add','Actualites@ajoute_article')->name("add");
+
+Route::get('/{lang?}','Actualites@getnew')->name("langue");

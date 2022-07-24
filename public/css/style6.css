@@ -2,19 +2,27 @@ body{
 	width: 100%;
 	width: 100%;
 }
-img{
-	position: absolute;
-	left: 42%;
+header{
+	width: 100%;
+	text-align: center;
 }
 form{
 	width: 30%;
 	height: 50%;
 	border: 2px solid #072875 ;
 	border-radius: 10px;
-	position: absolute;
+    position: absolute;
 	top: 35%;
 	left: 35%;
 	padding: 30px;
+}
+@media screen and (max-width: 400px) {
+  	form{
+		position: absolute;
+		left: 5%;
+		width: 90%;
+		
+    }
 }
 input[name='sub']{
 	background-color: #072875;

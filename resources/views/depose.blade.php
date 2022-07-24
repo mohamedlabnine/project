@@ -27,6 +27,11 @@
 			position: absolute;
 			left: 35%;
         }
+        @media screen and (max-width: 900px) {
+        	header p{
+        		font-size: 15px;
+        	}
+		}
 	</style>
 	@if ( config('app.locale') == 'ar' )
 		<style type="text/css">
