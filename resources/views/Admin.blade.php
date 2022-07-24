@@ -20,7 +20,7 @@
 						<form method="POST" action="{{ url('view') }}">
 							@csrf 
 							<input type="number"  name="id" value="{{ $demande->id }}" style=" display: none;"  >
-							<input type="submit" name="sub" class="input" style="background-color: blue; color :white;"  value="{{ __('admin.affiche') }}">
+							<input type="submit" name="sub" class="input" style="background-color: #072875; color :white;"  value="{{ __('admin.affiche') }}">
 						</form>
 					</td>
 			    </tr>

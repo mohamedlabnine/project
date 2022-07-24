@@ -15,7 +15,7 @@
 	<header class="text-center my-3">
 		<img src="../logo1.png">
 		<div class="dropdown position-absolute top-0 end-0 m-4 ">
-			<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+			<button class="btn  dropdown-toggle" type="button" style="background-color :#072875 ; color :white;" data-bs-toggle="dropdown" aria-expanded="true">
 			{{ __('admin.clicke') }}
 			</button>
 			<ul class="dropdown-menu">
@@ -39,7 +39,7 @@
 		@if ( config('app.locale') == 'ar')
 			<div class=" input-group col-5 mt-4 d-flex flex-row-reverse " >	
 				<label class="filebutton mx-3">
-					<i class="bi bi-plus-square-fill " style="font-size: 3rem; color: cornflowerblue;"></i>
+					<i class="bi bi-plus-square-fill " style="font-size: 3rem; color: #072875;"></i>
 					<span><input onchange="getName()" type="file" id="myfile" name="myfile"></span>
 				</label>
 				<div id="div" class="font-italic mx-3 pt-4" style="font-size: 1rem;">{{ __('admin.chose') }}</div>
@@ -56,7 +56,7 @@
 			</div>
 			<div class=" input-group col-5 mt-4 d-flex" >	
 				<label class="filebutton mx-3">
-					<i class="bi bi-plus-square-fill " style="font-size: 3rem; color: cornflowerblue;"></i>
+					<i class="bi bi-plus-square-fill " style="font-size: 3rem; color: #072875;"></i>
 					<span><input onchange="getName()" type="file" id="myfile" name="myfile"></span>
 				</label>
 				<div id="div" class="font-italic mx-3 pt-4" style="font-size: 1rem;">{{ __('admin.chose') }}</div>
@@ -66,7 +66,7 @@
 			</div>
 		@endif
 		<div class="input-group col-4 mt-5">
-			<input class="form-control bg-primary" type="submit" name="sub" value="{{ __('service.depose.Env') }}">
+			<input class="form-control" type="submit" name="sub" value="{{ __('service.depose.Env') }} " style="background-color : #072875 ; color :white;">
 		</div>
 	</form>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
